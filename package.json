@@ -1,0 +1,16 @@
+{
+  "name": "rpi-info",
+  "version": "1.0.0",
+  "description": "app per estrapolare le info del rpi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rocco Musolino",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "express": "^4.13.3",
+    "mustache": "^2.2.0"
+  }
+}
