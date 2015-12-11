@@ -1,5 +1,5 @@
 # rpi-dashboard
-Basic Raspberry Pi Node.js Dashboard
+## Basic Raspberry Pi Node.js Dashboard
 
 
 In the first lines of <code>index.js</code> you'll find default values, like template directory and server port.
@@ -11,7 +11,7 @@ In the first lines of <code>index.js</code> you'll find default values, like tem
 
         git clone https://roccomuso@github.com/roccomuso/rpi-dashboard.git
         
-And to execute the server at startup:
+And to run the server on start up:
 - Launch from CLI <code>crontab -e</code> and add the following line:
 
         @reboot /usr/local/bin/node /home/pi/Desktop/rpi-dashboard/index.js >/tmp/node_output 2>/tmp/node_error
@@ -21,4 +21,4 @@ And to execute the server at startup:
 - Templating system used: Mustache.js. Every template is in the <code>/templates</code> directory by default.
 
 
-# Author: Rocco Musolino - hackerstribe.com
+#### Author: Rocco Musolino - hackerstribe.com
