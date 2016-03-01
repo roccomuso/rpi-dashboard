@@ -18,6 +18,8 @@ And to run the server on start up:
 
 (General console.log and error messages are respectively in <code>/tmp/node_output</code> and <code>/tmp/node_error</code>)
 
+Or use a process manager (like PM2).
+
 - Templating system used: Mustache.js. Every template is in the <code>/templates</code> directory by default.
 
 
