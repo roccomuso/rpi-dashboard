@@ -20,9 +20,9 @@ Our advice is to use a process manager (like PM2):
 
 <h3>Clone the repo</h3>
 
-In the first lines of <code>index.js</code> you'll find default values, like template directory and server port.
+If you wanna edit the template or something else, clone the repo instead of using npm.
+In the first lines of <code>index.js</code> you'll find the path to the directory containing templates (<code>./templates</code>). You can customize the template as you like.
 
-        var SERVER_PORT = 80;
         var TEMPLATE_DIR = __dirname+'/templates/';
 
 - Clone the repository on the <code>/home/pi/Desktop/</code>:
@@ -38,6 +38,7 @@ And to run the server on start up:
 
 (General console.log and error messages are respectively in <code>/tmp/node_output</code> and <code>/tmp/node_error</code>)
 
+If you want you can run the dashboard under PM2 and then launch <code>pm2 startup</code> to make it runs on startup.
 
 - Templating system used: Mustache.js. Every template is in the <code>/templates</code> directory by default.
 
