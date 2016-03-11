@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
 *	RPi Dashboard - Execute at startup: 'crontab -e' and add the following line:
 *	@reboot /usr/local/bin/node /home/pi/Desktop/rpi-dashboard/index.js >/tmp/node_output 2>/tmp/node_error
@@ -11,12 +13,13 @@ var async = require('async');
 var Mustache = require('mustache'); // Mustache js
 var express = require('express');
 var app = express();
+var argv = require('./lib/args-handler.js'); // yargs (get CLI arguments)
 
 function execute(command, callback){ // Execute CLI cmds
     exec(command, function(error, stdout, stderr){ callback(stdout); });
 };
 
-var SERVER_PORT = 80;
+var SERVER_PORT = argv.port;
 var TEMPLATE_DIR = __dirname+'/templates/';
 var HOME_TEMPLATE = "home.mustache";
 var INFO_TEMPLATE = "info.mustache";

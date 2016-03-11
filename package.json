@@ -1,16 +1,36 @@
 {
-  "name": "rpi-info",
-  "version": "1.0.0",
+  "name": "rpi-dashboard",
+  "version": "1.0.1",
   "description": "app per estrapolare le info del rpi",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "preferGlobal": "true",
+  "bin": {
+    "rpi-dashboard": "./index.js"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roccomuso/rpi-dashboard"
+  },
+  "bugs": {
+    "url": "https://github.com/roccomuso/rpi-dashboard/issues"
+  },
+  "keywords": [
+    "raspberry pi",
+    "rpi",
+    "dashboard",
+    "info",
+    "server"
+  ],
   "author": "Rocco Musolino",
   "license": "ISC",
   "dependencies": {
     "async": "^1.5.0",
     "express": "^4.13.3",
-    "mustache": "^2.2.0"
+    "mustache": "^2.2.0",
+    "yargs": "^4.2.0"
   }
 }
