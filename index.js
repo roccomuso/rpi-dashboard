@@ -78,15 +78,20 @@ app.get('/info', function (req, res) {
 					callback(null, data);
 				});
 		    },
+		    usb: function(callback){
+				execute('lsusb', function(data){
+					callback(null, data);
+				});
+		    },
 		    network: function(callback){
 				execute('/sbin/ifconfig', function(data){ // executable not in default directory needs full path
 					callback(null, data);
 				});
 		    },
-		    usb: function(callback){
-				execute('lsusb', function(data){
-					callback(null, data);
-				});
+		    wifi: function(callback){
+		    	execute('iwlist wlan0 scan | grep ESSID', function(data){
+		    		callback(null, data);
+		    	});
 		    }
 		},
 		function(err, obj_to_render) {
