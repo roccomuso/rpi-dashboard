@@ -1,7 +1,7 @@
 {
   "name": "rpi-dashboard",
-  "version": "1.0.1",
-  "description": "app per estrapolare le info del rpi",
+  "version": "1.0.2",
+  "description": "Basic Raspberry Pi Node.js Dashboard",
   "main": "index.js",
   "preferGlobal": "true",
   "bin": {
