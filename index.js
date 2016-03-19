@@ -19,11 +19,12 @@ function execute(command, callback){ // Execute CLI cmds
     exec(command, function(error, stdout, stderr){ callback(stdout); });
 };
 
-var SERVER_PORT = argv.port;
+var SERVER_PORT = argv.port.trim(); // PM2 bug: https://github.com/Unitech/pm2/issues/2022
 var TEMPLATE_DIR = __dirname+'/templates/';
 var HOME_TEMPLATE = "home.mustache";
 var INFO_TEMPLATE = "info.mustache";
 
+if (isNaN(SERVER_PORT)) throw Error('SERVER_PORT not a number');
 
 // ENTRY POINTS:
 
@@ -108,9 +109,6 @@ app.get('/info', function (req, res) {
   	
 });
 
-// Optional port parameter
-if (process.argv[2] && parseInt(process.argv[2]))
-	SERVER_PORT = parseInt(process.argv[2]);
 
 var server = app.listen(SERVER_PORT, function () {
   var host = server.address().address;
