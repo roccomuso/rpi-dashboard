@@ -43,4 +43,4 @@ If you want you can run the dashboard under PM2 and then launch <code>pm2 startu
 - Templating system used: Mustache.js. Every template is in the <code>/templates</code> directory by default.
 
 
-#### Author: Rocco Musolino - hackerstribe.com
+#### Author: Rocco Musolino - [@roccomuso](https://twitter.com/roccomuso)
